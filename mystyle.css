@@ -1,0 +1,48 @@
+body {
+  background-image: url("./images/pizza_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#order {
+  background-color: white;
+  height:800px;
+  width:700px;
+  padding:10px;
+  border:3px solid black;
+  margin-left:auto;
+  margin-right:auto;
+}
+h1 {
+  text-align:center;
+  color:rgb(153, 0, 0);
+  border:3px solid black;
+  border-style: dotted;
+  margin-left:auto;
+  margin-right:auto;
+  padding:10px;
+  width:550px;
+  font-size:350%;
+}
+#title {
+  color:rgb(153, 0, 0);
+  margin-left:65px;
+  font-size:200%;
+}
+#information {
+  margin-left:65px;
+  margin-right:65px;
+  font-size:130%;
+}
+#radio {
+  margin-left:65px;
+  font-size:130%;
+}
+button {
+  margin-left:65px;
+  background-color:rgb(153, 0, 0);
+  color:white;
+  width:150px;
+  height:50px;
+  font-size: 200%;
+  font-family:serif;
+}

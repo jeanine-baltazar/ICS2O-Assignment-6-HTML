@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+  <html lang="en-ca">
+    <head>
+      <meta charset="utf-8">
+      <meta name="description"content="Order a pizza!">
+      <meta name="keywords"content= "Pizza, size, toppings, subtotal, total, tax.">
+      <meta name="author"content= "Jeanine Baltazar">
+      <meta name="viewport"content="width=device-width, initial-scale=1.0">
+      <title>Pizza</title>
+      <link rel="stylesheet" href="mystyle.css">
+      <script>
+      let toppingPrice;
+      let sizePrice;
+      let yourTotal;
+      let yourSubtotal;
+      let yourTax;
+        function submit() {
+          var largeSize=document.getElementById("largesize");
+          var extraLargeSize=document.getElementById("extralargesize");
+          var oneTopping=document.getElementById("onetopping");
+          var twoTopping=document.getElementById("twotopping");
+          var threeTopping=document.getElementById("threetopping");
+          var fourTopping=document.getElementById("fourtopping");
+          if(largeSize.checked==true && oneTopping.checked==true) {
+            toppingPrice=1.00;
+            sizePrice=6.00;
+            yourSubtotal= toppingPrice + sizePrice;
+            yourTax=yourSubtotal*0.13;
+            yourTotal=yourSubtotal+yourTax;
+            alert("Your subtotal:$" +yourSubtotal + "\n" + "Taxes:$" +yourTax + "\n" + "Your Total:$" +yourTotal);
+          } else if (largeSize.checked==true && twoTopping.checked==true) {
+            toppingPrice=1.75;
+            sizePrice=6.00;
+            yourSubtotal= +((toppingPrice + sizePrice).toFixed(2));
+            yourTax= +((yourSubtotal*0.13).toFixed(2));
+            yourTotal= +((yourSubtotal+yourTax).toFixed(2));
+            alert("Your subtotal:$" +yourSubtotal + "\n" + "Taxes:$" +yourTax + "\n" + "Your Total:$" +yourTotal);
+          } else if (largeSize.checked==true && threeTopping.checked==true) {
+            toppingPrice=2.50;
+            sizePrice=6.00;
+            yourSubtotal= +((toppingPrice + sizePrice).toFixed(2));
+            yourTax= +((yourSubtotal*0.13).toFixed(2));
+            yourTotal= +((yourSubtotal+yourTax).toFixed(2));
+            alert("Your subtotal:$" +yourSubtotal + "\n" + "Taxes:$" +yourTax + "\n" + "Your Total:$" +yourTotal);
+          } else if (largeSize.checked==true && fourTopping.checked==true) {
+            toppingPrice=3.35;
+            sizePrice=6.00;
+            yourSubtotal= +((toppingPrice + sizePrice).toFixed(2));
+            yourTax= +((yourSubtotal*0.13).toFixed(2));
+            yourTotal= +((yourSubtotal+yourTax).toFixed(2));
+            alert("Your subtotal:$" +yourSubtotal + "\n" + "Taxes:$" +yourTax + "\n" + "Your Total:$" +yourTotal);
+          } else if (extraLargeSize.checked==true && oneTopping.checked==true) {
+            toppingPrice=1.00;
+            sizePrice=10.00;
+            yourSubtotal= +((toppingPrice + sizePrice).toFixed(2));
+            yourTax= +((yourSubtotal*0.13).toFixed(2));
+            yourTotal= +((yourSubtotal+yourTax).toFixed(2));
+            alert("Your subtotal:$" +yourSubtotal + "\n" + "Taxes:$" +yourTax + "\n" + "Your Total:$" +yourTotal);
+          } else if (extraLargeSize.checked==true && twoTopping.checked==true) {
+            toppingPrice=1.75;
+            sizePrice=10.00;
+            yourSubtotal= +((toppingPrice + sizePrice).toFixed(2));
+            yourTax= +((yourSubtotal*0.13).toFixed(2));
+            yourTotal= +((yourSubtotal+yourTax).toFixed(2));
+            alert("Your subtotal:$" +yourSubtotal + "\n" + "Taxes:$" +yourTax + "\n" + "Your Total:$" +yourTotal);
+          } else if (extraLargeSize.checked==true && threeTopping.checked==true) {
+            toppingPrice=2.50;
+            sizePrice=10.00;
+            yourSubtotal= +((toppingPrice + sizePrice).toFixed(2));
+            yourTax= +((yourSubtotal*0.13).toFixed(2));
+            yourTotal= +((yourSubtotal+yourTax).toFixed(2));
+            alert("Your subtotal:$" +yourSubtotal + "\n" + "Taxes:$" +yourTax + "\n" + "Your Total:$" +yourTotal);
+          } else if (extraLargeSize.checked==true && fourTopping.checked==true) {
+            toppingPrice=3.35;
+            sizePrice=10.00;
+            yourSubtotal= +((toppingPrice + sizePrice).toFixed(2));
+            yourTax= +((yourSubtotal*0.13).toFixed(2));
+            yourTotal= +((yourSubtotal+yourTax).toFixed(2));
+            alert("Your subtotal:$" +yourSubtotal + "\n" + "Taxes:$" +yourTax + "\n" + "Your Total:$" +yourTotal);
+          } else {
+            alert("Please select the size of pizza and the number of toppings you wish to have.");
+          }
+        }
+      </script>
+    </head>
+    <body>
+      <div class="w3-container" id="order">
+        <h1>Pizza!</h1>
+        <p id="information">
+          Order your pizza here! Just select the size of pizza and number of toppings
+          you wish to have. Then, press submit to receive your receipt. Enjoy!
+        </p>
+        <br>
+        <h2 id="title">What Size?</h1><br>
+        <form name="size" id="radio">
+          <input type="radio" name="size" value="Large" id="largesize" class="input"> Large<br>
+          <input type="radio" name="size" value="ExtraLarge" id="extralargesize" class="input"> Extra Large
+        </form>
+        <br>
+        <br>
+        <h2 id="title">How many toppings?</h2>
+        <form name="toppings" id="radio">
+          <input type="radio" name="topping" value="1" id="onetopping" class="input"> 1<br>
+          <input type="radio" name="topping" value="2" id="twotopping"class="input"> 2<br>
+          <input type="radio" name="topping" value="3" id="threetopping" class="input"> 3<br>
+          <input type="radio" name="topping" value="4" id="fourtopping" class="input"> 4<br>
+        </form>
+        <br>
+        <br>
+        <br>
+        <button onclick="submit()">Submit</button>
+      </div>
+    </body>
+</html>
