@@ -9,18 +9,24 @@
       <title>Pizza</title>
       <link rel="stylesheet" href="mystyle.css">
       <script>
+      //Creating Variables
       let toppingPrice;
       let sizePrice;
       let yourTotal;
       let yourSubtotal;
       let yourTax;
+        //My function
         function submit() {
+          //This assigns specific varibles to all the radio inputs
           var largeSize=document.getElementById("largesize");
           var extraLargeSize=document.getElementById("extralargesize");
           var oneTopping=document.getElementById("onetopping");
           var twoTopping=document.getElementById("twotopping");
           var threeTopping=document.getElementById("threetopping");
           var fourTopping=document.getElementById("fourtopping");
+          /*If the pizza is large with one topping, the toppingPrice and sizePrice are set to specific prices.
+          Then, the code runs math to calculate yourSubtotal, yourTax and yourTotal. This is displayed as an alert
+          This is repeated for different sizes and topping amounts for all the else if statements.*/
           if(largeSize.checked==true && oneTopping.checked==true) {
             toppingPrice=1.00;
             sizePrice=6.00;
@@ -77,6 +83,8 @@
             yourTax= +((yourSubtotal*0.13).toFixed(2));
             yourTotal= +((yourSubtotal+yourTax).toFixed(2));
             alert("Your subtotal:$" +yourSubtotal + "\n" + "Taxes:$" +yourTax + "\n" + "Your Total:$" +yourTotal);
+            /*if none of the options are met, it means the user has not filled in a one, if not both, of the size
+            and topping options.*/
           } else {
             alert("Please select the size of pizza and the number of toppings you wish to have.");
           }
